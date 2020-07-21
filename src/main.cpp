@@ -109,7 +109,7 @@ install_block
 bool block_has_ended()
 {
     std::string const temp { settings::retrieve_end_time() };
-    auto const end_time { utilities::datetime_parser(temp) };
+    auto const end_time { utilities::end_time_parser(temp) };
     auto const current_time { std::chrono::system_clock::now() };
     auto const time_until_end
         { std::chrono::duration_cast<std::chrono::minutes>
