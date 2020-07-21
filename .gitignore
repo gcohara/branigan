@@ -1,0 +1,7 @@
+*.out
+bin/*
+build/*
+*.DS_Store*
+*scratch.cpp
+*#*
+*scend*
