@@ -1,6 +1,6 @@
 *.out
 bin/*
-build/*
+/build/*
 *.DS_Store*
 *scratch.cpp
 *#*
