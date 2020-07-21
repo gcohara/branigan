@@ -17,7 +17,7 @@ First, clone the repository:
 git clone https://github.com/gcohara/branigan.git 
 ```
 
-Then, navigate to the build folder, run CMake, and then run make:  
+Then navigate to the build folder, run CMake, and run make:  
 ```
 cd branigan/build/ && cmake .. && make
 ```
