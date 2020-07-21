@@ -26,7 +26,7 @@ cd branigan/build/ && cmake .. && make
 
 Finally (and optionally) create a symbolic link to the Branigan binary:  
 ```
-sudo ln -s ../bin/branigan /usr/local/bin/branigan
+sudo ln -s $(pwd)/../bin/branigan /usr/local/bin/branigan
 ```
 
 ## Usage
