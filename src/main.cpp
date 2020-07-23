@@ -6,6 +6,7 @@
 #include <string>
 #include <vector>
 #include <filesystem>
+#include <unistd.h>
 #include "../include/blocklist.hpp"
 #include "../include/block_writer.hpp"
 #include "../include/daemon.hpp"
@@ -25,6 +26,12 @@ install_block
 
 int main(int argc, char * argv[])
 {
+    if ( geteuid() != 0 ) {
+        std::cout << "Branigan needs to be run as root!\n"
+                  << "Try 'sudo branigan ...'\n";
+        exit(EXIT_FAILURE);
+    }
+    
     // Given enough args? No, print documentation!
     if ( argc < 2 ) { 
         print_documentation();
@@ -50,8 +57,7 @@ int main(int argc, char * argv[])
             blocklist_path = utilities::get_default_blocklist_path();
             end_time_or_duration = argv[2];
         }
-        auto const end_time{ utilities::end_time_parser(end_time_or_duration) };
-        // need to add in something to check we are root
+        auto const end_time { utilities::end_time_parser(end_time_or_duration) };
         install_block(blocklist_path, end_time);        
     }
 
