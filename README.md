@@ -75,9 +75,14 @@ sudo branigan --checkup
 
 This will check if the block has ended, and clear it if so.
 
+## Alternatives
+
+There are two similar programs for Linux that I'm aware of:  
+- [**Chomper:**](https://github.com/aniketpanjwani/chomper) This takes a different approach to how its blocking works, and looks good. Unfortunately, it hasn't been updated in a while (as of July 2020).
+- [**Self Control Linux:**](https://github.com/zengargoyle/SelfControl) This was a more faithful port of the original SelfControl, but is now unfortunately deprecated.
+
 # TODO
 ### README
-- Add in alternatives section
 - Explanation of name
 ### CODE
 - Automated blocking
