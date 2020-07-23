@@ -8,7 +8,7 @@ A GNU/Linux program for restricting unproductive internet usage.
 
 Branigan was originally concieved as a port of the excellent [**SelfControl**](https://selfcontrolapp.com/) for macOS, and shares its objective of blocking access to websites you find distracting until a given end time.  
 
-Note that Branigan will only work on distributions using **systemd** - which is most of them!
+Note that Branigan will only work on distributions using **systemd**. Fortunately, barring a few enthusiast distros, this is most of them.
 
 ## Installation
 
@@ -33,9 +33,9 @@ sudo ln -s $(pwd)/../bin/branigan /usr/local/bin/branigan
 
 Branigan has a command line interface only, and needs to be run with `sudo`. This was chosen deliberately to avoid the complications of Linux GUIs. Also, the average GNU/Linux user tends to be more confident with using a terminal.  
 
-The simplest way to use Branigan is first by creating a blocklist in your home directory:  
+The simplest way to use Branigan is first by creating a blocklist in the branigan directory (a default sample blocklist is included):  
 ```
-touch ~/.braniganblocklist
+touch branigan-blocklist
 ```
 
 Then add your sites to this blocklist, for example:  
