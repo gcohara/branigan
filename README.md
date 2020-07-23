@@ -19,9 +19,14 @@ First, clone the repository:
 git clone https://github.com/gcohara/branigan.git 
 ```
 
-Then navigate to the build folder, run CMake, and run make:  
+Then navigate into the Branigan folder, and create the build and binary folders:
 ```
-cd branigan/build/ && cmake .. && make
+mkdir build && mkdir bin
+```
+
+Now navigate to the build folder, run CMake, and run make:  
+```
+cd build/ && cmake .. && make
 ```
 
 Finally (and optionally) create a symbolic link to the Branigan binary:  
