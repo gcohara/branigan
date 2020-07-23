@@ -132,5 +132,16 @@ bool block_has_ended()
 
 void print_documentation()
 {
-    std::cout << "Documentation goes here \n";
+    std::cout << "To install a block, please run using the --install option, "
+              << "followed by either:\n"
+              << "1.) A path to a blocklist and an end time.\n"
+              << "2.) An end time (in which case the default blocklist will be used)\n\n"
+              << "The end time should be in either of the following formats:\n"
+              << "1.) An ISO8601 datetime, i.e YYYY-MM-DDTHH:MM:SS+HHMM.\n"
+              << "2.) A simple 24-hour HH:MM format, e.g 17:00.\n"
+              << "In the second case, your timezone will be automatically detected.\n"
+              << "Note that if you provide a time that's already passed today, "
+              << "Branigan will assume you mean that time tomorrow.\n\n"
+              << "If a block is still in place and you don't think it should be, "
+              << "try runnning: 'sudo branigan --checkup'.\n";
 }
