@@ -18,15 +18,9 @@ using namespace date;
 
 std::string const utilities::get_default_blocklist_path()
 {
-    char * homedir_raw { getenv("HOME") };
-    if ( homedir_raw == NULL ) {
-        std::cout << "Unable to get default blocklist path (couldn't read $HOME)\n"
-                  << "Please try running again, but with the path to the blocklist.\n";
-        exit(EXIT_FAILURE);
-    }
-    std::string homedir { homedir_raw };
-    homedir += "/.braniganblocklist";
-    return homedir;
+    auto default_blocklist { get_path_to_executable_folder() };
+    default_blocklist += "/../branigan-blocklist";
+    return default_blocklist;
 }
 
 // Converts a time point into a string containing the time in the ISO8601 format
