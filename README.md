@@ -1,4 +1,6 @@
-# WORK IN PROGRESS
+## Status
+
+Usable, but requires further testing.
 
 # Branigan
 
